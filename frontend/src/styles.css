@@ -1,0 +1,85 @@
+/* basic styles so it looks professional */
+body { 
+  font-family: Inter, Arial, sans-serif; 
+  margin: 0; 
+  color: #0f172a; 
+  padding-top: 70px; /* Space for fixed navbar */
+}
+
+.container { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 16px; 
+}
+
+.app-card { 
+  background: white; 
+  border-radius: 12px; 
+  padding: 18px; 
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06); 
+}
+
+button { 
+  background: #16a34a; 
+  color: white; 
+  border: none; 
+  padding: 8px 12px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+}
+
+button:hover {
+  background: #15803d;
+  transition: background-color 0.2s ease;
+}
+
+input, textarea, select { 
+  padding: 8px; 
+  border-radius: 8px; 
+  border: 1px solid #e6e6e6; 
+  width: 100%; 
+  box-sizing: border-box; /* Prevents overflow */
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.1);
+}
+
+h2 { 
+  margin-top: 0; 
+}
+
+.grid { 
+  display: grid; 
+  gap: 16px; 
+}
+
+.grid.cols2 { 
+  grid-template-columns: repeat(2, 1fr); 
+}
+
+/* Additional utility classes for better spacing */
+.main-content {
+  padding: 20px 0;
+}
+
+.section-spacing {
+  margin-bottom: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Slightly less padding on mobile */
+  }
+  
+  .container {
+    padding: 12px;
+  }
+  
+  .grid.cols2 {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
